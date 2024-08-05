@@ -3,4 +3,9 @@ on: workflow_dispatch
 jobs:
   dmeo:
     runs-on: [self-hosted, app_service]
+    steps:
+      - uses: actions/setup-python@v5.1.1
+        with: 
+          python-version: 3.10
+      - run: python app.py
     
