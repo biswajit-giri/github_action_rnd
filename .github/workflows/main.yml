@@ -1,0 +1,6 @@
+name: demo-workflow
+on: workflow_dispatch
+jobs:
+  dmeo:
+    runs-on: [self-hosted, app_service]
+    
