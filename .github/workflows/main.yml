@@ -9,4 +9,8 @@ jobs:
         with: 
           python-version: 3.9.19
       - run: python ./app.py
+      - uses: actions/upload-artifact@v4.3.6
+        with:
+          name: demo
+          path: "./*"
     
