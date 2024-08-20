@@ -16,6 +16,7 @@ jobs:
           python-version: '3.9'
       - run: |
           pip install -r application/requirments.txt
+          python -c "print("hello world")"
     
   
     
