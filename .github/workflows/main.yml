@@ -15,7 +15,7 @@ jobs:
         with:
           python-version: '3.9'
       - run: |
-          pip install -r requirment.txt
+          pip install -r application/requirments.txt
     
   
     
