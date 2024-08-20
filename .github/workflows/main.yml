@@ -1,0 +1,21 @@
+name: test-ci-uat
+on: 
+  pull_request:
+    branches:
+      - developer
+jobs:
+  uat:
+    runs-on: ubuntu-latest
+    environment:
+      name: uat
+    name: developer-branch-deployment
+    steps:
+      - uses: actions/checkout@v4.1.7
+      - uses: actions/setup-python@v5.1.1
+        with:
+          python-version: '3.9'
+      - run: |
+          pip install -r requirment.txt
+    
+  
+    
