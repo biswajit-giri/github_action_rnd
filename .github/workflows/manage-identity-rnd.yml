@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - developer
-  workflow_dispatch:
+  # workflow_dispatch:
 jobs:
   uat:
     runs-on: [self-hosted, manage-identity]
