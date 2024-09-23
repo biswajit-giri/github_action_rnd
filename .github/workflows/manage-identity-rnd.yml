@@ -1,6 +1,8 @@
 name: test-ci-uat
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - developer
 jobs:
   uat:
     runs-on: [self-hosted, manage-identity]
