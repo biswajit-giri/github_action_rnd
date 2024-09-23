@@ -1,0 +1,21 @@
+name: test-ci-uat
+on:
+  workflow_dispatch:
+jobs:
+  uat:
+    runs-on: [self-hosted, manage-identity]
+    steps:
+      - name: Azure login
+        uses: azure/login@v2
+        with:
+          auth-type: IDENTITY
+          tenant-id: e4e34038-ea1f-4882-b6e8-ccd776459ca0
+          subscription-id: f448aa67-04d6-4cb6-90b9-7201855ca1dd
+          enable-AzPSSession: true
+      - run: |
+          ls
+      - run: |
+          az storage blob list --account-name manageidentityrnd --container-name test-rnd --auth-mode login
+      - run: |
+          az storage blob download --account-name manageidentityrnd --container-name test-rnd --name 'Image (8).jpg' --auth-mode login
+          
