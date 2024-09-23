@@ -14,7 +14,7 @@ jobs:
           auth-type: IDENTITY
           tenant-id: e4e34038-ea1f-4882-b6e8-ccd776459ca0
           subscription-id: f448aa67-04d6-4cb6-90b9-7201855ca1dd
-          enable-AzPSSession: true
+          client-id: 83327232-f256-42d0-a178-f2769e88e14f
       - run: |
           ls -al
       - run: |
