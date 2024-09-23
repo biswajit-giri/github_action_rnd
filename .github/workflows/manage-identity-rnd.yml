@@ -1,5 +1,6 @@
 name: test-ci-uat
 on:
+  pull_request:
   workflow_dispatch:
 jobs:
   uat:
