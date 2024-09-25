@@ -1,13 +1,13 @@
-name: test-ci-uat
+name: action-rnd
 on: 
   pull_request:
     branches:
       - developer
 jobs:
   uat:
-    runs-on: ubuntu-latest
-    environment:
-      name: uat
+    runs-on: ["self-hosted", "ubuntu"]
+    # environment:
+    #   name: uat
     name: developer-branch-deployment
     steps:
       - uses: actions/checkout@v4.1.7
@@ -17,6 +17,13 @@ jobs:
       - run: |
           pip install -r application/requirments.txt
           python -c "print("hello world")"
+          pip install virtualenv
+          python -m venv env 
+          ./env/bin/pip install scikit-learn
+          ./env/bin/pip install fastapi
     
+  
+    
+
   
     
