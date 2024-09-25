@@ -17,11 +17,11 @@ jobs:
       - run: |
           pwd
       - run: |
+          mkdir my_working_dir
           pip install virtualenv
           python -m venv env 
           ./env/bin/pip install scikit-learn
           ./env/bin/pip install fastapi
-    
   
     
 
