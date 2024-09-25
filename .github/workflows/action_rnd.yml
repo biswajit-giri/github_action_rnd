@@ -1,6 +1,6 @@
 name: action-rnd
 on: 
-  pull_request:
+  push:
     branches:
       - developer
 jobs:
