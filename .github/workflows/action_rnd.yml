@@ -14,7 +14,7 @@ jobs:
           mkdir my_working_dir
       - uses: actions/checkout@v4.1.7
         with:
-          path: "./mkdir my_working_dir"
+          path: "./my_working_dir"
       - uses: actions/setup-python@v5.1.1
         with:
           python-version: '3.9'
