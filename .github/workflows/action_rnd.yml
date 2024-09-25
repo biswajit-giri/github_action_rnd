@@ -15,7 +15,6 @@ jobs:
         with:
           python-version: '3.9'
       - run: |
-          python -c "print("hello world")"
           pip install virtualenv
           python -m venv env 
           ./env/bin/pip install scikit-learn
