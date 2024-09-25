@@ -19,9 +19,9 @@ jobs:
       - run: |
           mkdir my_working_dir
           pip install virtualenv
-          python -m venv env 
-          ./env/bin/pip install scikit-learn
-          ./env/bin/pip install fastapi
+          python -m venv ./my_working_dir/env 
+          ./my_working_dir/env/bin/pip install scikit-learn
+          ./my_working_dir/env/bin/pip install fastapi
   
     
 
