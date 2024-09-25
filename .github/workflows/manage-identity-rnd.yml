@@ -1,4 +1,4 @@
-name: test-ci-uat
+name: manage-identity-rnd
 on:
   push:
     branches:
