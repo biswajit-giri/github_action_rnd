@@ -22,6 +22,7 @@ jobs:
           python -m venv ./my_working_dir/env 
           ./my_working_dir/env/bin/pip install scikit-learn
           ./my_working_dir/env/bin/pip install fastapi
+          rm -rf ./my_working_dir
   
     
 
