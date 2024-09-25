@@ -10,18 +10,22 @@ jobs:
     #   name: uat
     name: developer-branch-deployment
     steps:
+      - run: |
+          mkdir my_working_dir
       - uses: actions/checkout@v4.1.7
+        with:
+          path: "./mkdir my_working_dir"
       - uses: actions/setup-python@v5.1.1
         with:
           python-version: '3.9'
       - run: |
           pwd
       - run: |
-          mkdir my_working_dir
           pip install virtualenv
           python -m venv ./my_working_dir/env 
           ./my_working_dir/env/bin/pip install scikit-learn
           ./my_working_dir/env/bin/pip install fastapi
+      - run: |
           rm -rf ./my_working_dir
   
     
