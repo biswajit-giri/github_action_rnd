@@ -5,7 +5,7 @@ import requests
 app = FastAPI()
 
 # Sample data
-items = {"hi", "there"}
+items = {"hi", "there", "donot know why its been added"}
 
 # Define a model for POST request data
 class Item(BaseModel):
