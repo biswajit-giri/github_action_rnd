@@ -34,7 +34,7 @@ jobs:
           JF_URL: ${{secrets.JF_URL}}
           JF_ACCESS_TOKEN: ${{secrets.JF_ACCESS_TOKEN}}
       - run: |
-          jf rt ux
+          jf rt u --archive zip requirement.txt testartifactsrepo
           
   
     
