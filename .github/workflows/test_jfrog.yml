@@ -1,1 +1,18 @@
-
+name: jfrog-rnd
+on: 
+  push:
+    branches:
+      - developer
+jobs:
+  uat:
+    runs-on: ["self-hosted", "ubuntu"]
+    steps:
+      - uses: jfrog/setup-jfrog-cli@v4.4.1
+        with:
+          version: 2.67.0
+        env:
+          JF_URL: ${{secrets.JF_URL}}
+          JF_ACCESS_TOKEN: ${{secrets.JF_ACCESS_TOKEN}}
+      - run: |
+          jf rt dl testartifactsrepo/frontend .
+        
