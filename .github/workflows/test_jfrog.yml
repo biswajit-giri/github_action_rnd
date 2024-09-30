@@ -17,4 +17,5 @@ jobs:
           jf rt dl testartifactsrepo/frontend .
       - run: |
           ls -al
+          cat frontend
         
