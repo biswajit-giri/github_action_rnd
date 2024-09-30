@@ -10,8 +10,8 @@ jobs:
     #   name: uat
     name: developer-branch-deployment
     steps:
-      - run: |
-          mkdir my_working_dir
+      # - run: |
+      #     mkdir my_working_dir
       - uses: actions/checkout@v4.1.7
         with:
           path: "./my_working_dir"
