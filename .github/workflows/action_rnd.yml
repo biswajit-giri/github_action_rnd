@@ -34,8 +34,11 @@ jobs:
         env:
           JF_URL: ${{secrets.JF_URL}}
           JF_ACCESS_TOKEN: ${{secrets.JF_ACCESS_TOKEN}}
+      # - run: |
+      #     jf rt u  my_working_dir/application/requirements.txt testartifactsrepo/frontend_{{}}
+
       - run: |
-          jf rt u  my_working_dir/application/requirements.txt testartifactsrepo/frontend
+          echo "Build ID: $GITHUB_RUN_ID"
           
   
     
