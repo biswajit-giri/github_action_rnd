@@ -39,6 +39,9 @@ jobs:
 
       - run: |
           echo "Build ID: $GITHUB_RUN_ID"
+      - run: |
+          printenv >> env.txt 
+          
           
   
     
