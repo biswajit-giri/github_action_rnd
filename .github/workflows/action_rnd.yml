@@ -38,9 +38,7 @@ jobs:
       #     jf rt u  my_working_dir/application/requirements.txt testartifactsrepo/frontend_{{}}
 
       - run: |
-          echo "Build ID: $GITHUB_RUN_ID"
-      - run: |
-          printenv >> env.txt 
+          echo "Build ID: $GITHUB_RUN_NUMBER"
           
           
   
