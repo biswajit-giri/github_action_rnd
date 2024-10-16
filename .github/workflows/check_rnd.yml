@@ -9,7 +9,7 @@ jobs:
       contents: read
       packages: read
       statuses: write  
-    runs-on: ["self-hosted", "ubuntu"]
+    runs-on: ubuntu-latest #["self-hosted", "ubuntu"]
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
