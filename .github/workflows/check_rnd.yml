@@ -22,9 +22,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_PYTHON_PYLINT: true
           VALIDATE_PYTHON_BLACK: true
+          LOG_FILE: $GITHUB_WORKSPACE/error_linter.log
           CREATE_LOG_FILE: true
           DISABLE_ERRORS: true
-          LOG_FILE: $GITHUB_WORKSPACE/error_linter.log
           LOG_LEVEL: ERROR
       - name: Code Suggestion from Linter
         run: |
