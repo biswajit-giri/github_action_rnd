@@ -8,7 +8,9 @@ jobs:
     permissions:
       contents: write
       packages: read
-      statuses: write  
+      statuses: write
+      pull-requests: write
+      discussions: write
     runs-on: ubuntu-latest #["self-hosted", "ubuntu"]
     steps:
       - name: Checkout code
