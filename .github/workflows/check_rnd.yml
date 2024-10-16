@@ -22,12 +22,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_PYTHON_PYLINT: true
           VALIDATE_PYTHON_BLACK: true
-          LOG_FILE: ${{GITHUB_WORKSPACE}}/error_linter.log
+          LOG_FILE: $GITHUB_WORKSPACE/error_linter.log
           LOG_LEVEL: ERROR
           DISABLE_ERRORS: true
       - name: Code Suggestion from Linter
         run: |
-          gh pr comment ${{ github.event.pull_request.number}} --body-file ${{GITHUB_WORKSPACE}}/error_linter.log
+          gh pr comment ${{ github.event.pull_request.number}} --body-file $GITHUB_WORKSPACE/error_linter.log
         env: 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # FIX_PYTHON_RUFF: true
