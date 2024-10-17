@@ -22,6 +22,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_PYTHON_BLACK: true
+          FIX_PYTHON_BLACK: true
       - name: Commit and push linting fixes
         if: >
           github.event_name == 'pull_request' 
