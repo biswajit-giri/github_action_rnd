@@ -31,7 +31,7 @@ jobs:
           LOG_LEVEL: ERROR
           SAVE_SUPER_LINTER_OUTPUT: true
           SAVE_SUPER_LINTER_SUMMARY: true
-          SUPER_LINTER_SUMMARY_FILE_NAME: linter_summary
+          # SUPER_LINTER_SUMMARY_FILE_NAME: linter_summary
           # SUPER_LINTER_OUTPUT_DIRECTORY_NAME: linter
           # FILTER_REGEX_EXCLUDE: $GITHUB_WORKSPACE/linter/**
           
