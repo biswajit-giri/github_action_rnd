@@ -25,12 +25,12 @@ jobs:
           # VALIDATE_PYTHON_PYLINT: true
           VALIDATE_PYTHON_BLACK: true
           # FIX_PYTHON_BLACK: true
-          LOG_FILE: error_linter.log
+          # LOG_FILE: error_linter.log
           CREATE_LOG_FILE: true
           DISABLE_ERRORS: true
           LOG_LEVEL: ERROR
-          SAVE_SUPER_LINTER_OUTPUT: true
-          SAVE_SUPER_LINTER_SUMMARY: true
+          # SAVE_SUPER_LINTER_OUTPUT: true
+          # SAVE_SUPER_LINTER_SUMMARY: true
           # SUPER_LINTER_SUMMARY_FILE_NAME: linter_summary
           # SUPER_LINTER_OUTPUT_DIRECTORY_NAME: linter
           # FILTER_REGEX_EXCLUDE: $GITHUB_WORKSPACE/linter/**
