@@ -32,13 +32,13 @@ jobs:
           SAVE_SUPER_LINTER_OUTPUT: true
           SAVE_SUPER_LINTER_SUMMARY: true
           SUPER_LINTER_SUMMARY_FILE_NAME: linter_summary
-          SUPER_LINTER_OUTPUT_DIRECTORY_NAME: linter
-          # # FILTER_REGEX_EXCLUDE: $GITHUB_WORKSPACE/linter/**
+          SUPER_LINTER_OUTPUT_DIRECTORY_NAME: /tmp/linter
+          # # FILTER_REGEX_EXCLUDE: tmp/linter/**
           
-      # - uses: actions/upload-artifact@v4.4.3
-      #   with:
-      #     name: error_log
-      #     path: ./linter/linter_summary
+      - uses: actions/upload-artifact@v4.4.3
+        with:
+          name: error_log
+          path: /tmp/linter/linter_summary
         
       # - name: Code Suggestion from Linter
       #   run: |
