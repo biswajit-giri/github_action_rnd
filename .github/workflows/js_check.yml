@@ -22,7 +22,16 @@ jobs:
         uses: super-linter/super-linter@v7.1.0 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          FIX_JAVASCRIPT_ES: true
+          # FIX_JAVASCRIPT_ES: true
+          # FIX_JSX_PRETTIER:
+          # FIX_JSX
+          # FIX_TSX
+          # FIX_TYPESCRIPT_ES
+          # TYPESCRIPT_ES_CONFIG_FILE
+          VALIDATE_JSX: true
+          # VALIDATE_JSX_PRETTIER
+          VALIDATE_TSX: true
+          # VALIDATE_TYPESCRIPT_ES
           # FIX_JAVASCRIPT_PRETTIER: true
           VALIDATE_JAVASCRIPT_ES: true
           # VALIDATE_JAVASCRIPT_PRETTIER: true
