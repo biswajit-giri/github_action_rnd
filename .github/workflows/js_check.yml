@@ -29,7 +29,7 @@ jobs:
           # FIX_TYPESCRIPT_ES
           # TYPESCRIPT_ES_CONFIG_FILE
           VALIDATE_JSX: true
-          # VALIDATE_JSX_PRETTIER
+          VALIDATE_JSX_PRETTIER: true
           VALIDATE_TSX: true
           VALIDATE_TYPESCRIPT_ES: true
           # FIX_JAVASCRIPT_PRETTIER: true
