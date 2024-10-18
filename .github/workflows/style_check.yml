@@ -1,5 +1,5 @@
 
-name: style-checks-rnd
+name: style-checks-rnd-02
 on: 
   pull_request:
     branches:
