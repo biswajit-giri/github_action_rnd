@@ -1,0 +1,57 @@
+name: lint-checks-rnd
+on: 
+  pull_request:
+    branches:
+      - developer
+jobs:
+  any:
+    permissions:
+      contents: write
+      packages: read
+      statuses: write
+      pull-requests: write
+      discussions: write
+    runs-on: ubuntu-latest #["self-hosted", "ubuntu"]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Super-linter
+        uses: super-linter/super-linter@v7.1.0 # x-release-please-version
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VALIDATE_PYTHON_PYLINT: true
+          ENABLE_GITHUB_ACTIONS_STEP_SUMMARY: true
+          SAVE_SUPER_LINTER_OUTPUT: true
+          SAVE_SUPER_LINTER_SUMMARY: true
+          SUPER_LINTER_SUMMARY_FILE_NAME: $GITHUB_STEP_SUMMARY
+          # SUPER_LINTER_OUTPUT_DIRECTORY_NAME: /tmp/linter
+          # # # FILTER_REGEX_EXCLUDE: tmp/linter/**
+          
+      # - uses: actions/upload-artifact@v4.4.3
+      #   with:
+      #     name: error_log
+      #     path: /tmp/linter/linter_summary
+        
+      # - name: Code Suggestion from Linter
+      #   run: |
+      #     gh pr comment ${{ github.event.pull_request.number}} --body-file $GITHUB_WORKSPACE/error_linter.log
+      #   env: 
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # FIX_PYTHON_RUFF: true
+      # - name: Commit and push linting fixes
+      #   # Run only on:
+      #   # - Pull requests
+      #   # - Not on the default branch
+      #   if: >
+      #     github.event_name == 'pull_request' &&
+      #     github.ref_name != github.event.repository.default_branch
+      #   uses: stefanzweifel/git-auto-commit-action@v5
+      #   with:
+      #     branch: ${{ github.event.pull_request.head.ref || github.head_ref || github.ref }}
+      #     commit_message: "chore: fix linting issues"
+      #     commit_user_name: super-linter
+      #     commit_user_email: super-linter@super-linter.dev
+
+      
