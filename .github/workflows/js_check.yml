@@ -3,7 +3,7 @@ name: eslint-rnd
 on: 
   pull_request:
     branches:
-      - developerdfgbhnm,
+      - developer
 jobs:
   any:
     permissions:
@@ -22,8 +22,8 @@ jobs:
         uses: super-linter/super-linter@v7.1.0 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          FIX_JAVASCRIPT_ES: true
-          FIX_JAVASCRIPT_PRETTIER: true
-          VALIDATE_JAVASCRIPT_ES: true
+          # FIX_JAVASCRIPT_ES: true
+          # FIX_JAVASCRIPT_PRETTIER: true
+          # VALIDATE_JAVASCRIPT_ES: true
           VALIDATE_JAVASCRIPT_PRETTIER: true
           # JAVASCRIPT_ES_CONFIG_FILE
