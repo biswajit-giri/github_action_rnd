@@ -23,8 +23,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_PYTHON_PYLINT: true
           ENABLE_GITHUB_ACTIONS_STEP_SUMMARY: true
-          # SAVE_SUPER_LINTER_OUTPUT: true
-          # SAVE_SUPER_LINTER_SUMMARY: true
+          SAVE_SUPER_LINTER_OUTPUT: true
+          SAVE_SUPER_LINTER_SUMMARY: true
           # SUPER_LINTER_SUMMARY_FILE_NAME: linter_summary
           # SUPER_LINTER_OUTPUT_DIRECTORY_NAME: /tmp/linter
           # # # FILTER_REGEX_EXCLUDE: tmp/linter/**
