@@ -2,10 +2,19 @@ name: action-rnd
 on: 
   push:
     branches:
-      - developer
+      - '**'
+  pull_request:
+    branches:
+      - develop
   workflow_dispatch:
 jobs:
+  check: 
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "checks running"
   uat:
+    needs: check
     runs-on: ["self-hosted", "ubuntu"]
     # environment:
     #   name: uat
