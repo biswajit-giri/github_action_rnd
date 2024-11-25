@@ -1,12 +1,14 @@
 name: action-rnd
 on: 
   push:
-    branches:
-      - '*'
-    # branches-ignore:
-    #   - check-rnd
+    branches-ignore:
+      - check-rnd
   pull_request:
     branches:
+      - '*'
+  pull_request:
+    branches:
+      - check-rnd
       - develop
       - check-rnd
   workflow_dispatch:
