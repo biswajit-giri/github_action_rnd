@@ -1,8 +1,10 @@
 name: action-rnd
 on: 
   push:
-    branches-ignore:
-      - check-rnd
+    branches:
+      - '*'
+    # branches-ignore:
+    #   - check-rnd
   pull_request:
     branches:
       - develop
