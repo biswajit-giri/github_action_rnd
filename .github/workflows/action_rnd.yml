@@ -16,7 +16,7 @@ jobs:
           echo "checks running"
   uat:
     needs: check
-    runs-on: ["self-hosted", "ubuntu"]
+    runs-on: ubuntu-latest
     # environment:
     #   name: uat
     name: developer-branch-deployment
